@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dscatalog.dscatalog.entities.Category;
 import com.dscatalog.dscatalog.services.CategoryServices;
 
+
 @RestController
 @RequestMapping(value = "/categories")
 public class CategoryResource {
@@ -21,8 +22,9 @@ public class CategoryResource {
 	@GetMapping
 	public ResponseEntity<List<Category>> findAll() {
 		List<Category> list = service.findAll();
-		return ResponseEntity.ok().body(list);
 		
+		return ResponseEntity.ok().body(list);
 	}
 
 }
+//o resource implementa os controladores rest
